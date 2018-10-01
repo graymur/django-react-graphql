@@ -10,9 +10,9 @@ export default {
 	header: wraper(require('./widgets/Header').default),
 	'support-text': wraper(require('./widgets/SupportText').default),
 	input: wraper(require('./widgets/Input').default),
-	'monaco-editor': wraper(
-		require('./widgets/MonacoEditor/loadable-component').default,
-	),
+	// 'monaco-editor': wraper(
+	// 	require('./widgets/MonacoEditor/loadable-component').default,
+	// ),
 	'dotloop-select-profile': wraper(
 		require('./widgets/DotloopSelectProfile').default,
 	),
