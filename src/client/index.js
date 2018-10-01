@@ -1,5 +1,5 @@
-import 'babel-polyfill'
-import 'whatwg-fetch'
+// import '@babel/polyfill'
+// import 'whatwg-fetch'
 import React from 'react'
 import { render } from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
