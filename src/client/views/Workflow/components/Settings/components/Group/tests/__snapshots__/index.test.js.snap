@@ -1,0 +1,163 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders empty option and validation error, submit button disabled 1`] = `
+<div
+  className="workflow-settings__group"
+>
+  <h3
+    className="workflow-settings__group__type"
+  >
+    Trigger
+  </h3>
+  <div
+    className="workflow-settings__group__wr _active"
+  >
+    <header
+      className="workflow-settings__group__header"
+      onClick={[Function]}
+    >
+      <span
+        className="app-logo app-logo-cn_mailchimp"
+        title={undefined}
+      >
+        <img
+          src="undefined/mailchimp_128x128.png"
+        />
+      </span>
+      <h2
+        className="workflow-settings__group__title"
+      >
+        Create or update contact
+      </h2>
+    </header>
+    <div
+      className="workflow-widget _select"
+    >
+      <select
+        className="workflow-widget__select styled-select workflow_select_mailing"
+        defaultValue={undefined}
+        id="mailing_list_id"
+        name="listId"
+        onChange={[Function]}
+      >
+        <option
+          value=""
+        >
+          Select
+        </option>
+        <option
+          value={1}
+        >
+          Option 1
+        </option>
+        <option
+          value={2}
+        >
+          Option 2
+        </option>
+      </select>
+    </div>
+    <div
+      className="workflow-widget _validation-message"
+    >
+      <div
+        className="workflow-widget__validation-message _active"
+      >
+        Select mailing list
+      </div>
+    </div>
+    <div
+      className="workflow-widget _save-block"
+    >
+      <button
+        className="main-button"
+        disabled={true}
+        onClick={[Function]}
+      >
+        Save
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Renders selected option, doesn't render validation option, submit button enabled 1`] = `
+<div
+  className="workflow-settings__group"
+>
+  <h3
+    className="workflow-settings__group__type"
+  >
+    Trigger
+  </h3>
+  <div
+    className="workflow-settings__group__wr _active"
+  >
+    <header
+      className="workflow-settings__group__header"
+      onClick={[Function]}
+    >
+      <span
+        className="app-logo app-logo-cn_mailchimp"
+        title={undefined}
+      >
+        <img
+          src="undefined/mailchimp_128x128.png"
+        />
+      </span>
+      <h2
+        className="workflow-settings__group__title"
+      >
+        Create or update contact
+      </h2>
+    </header>
+    <div
+      className="workflow-widget _select"
+    >
+      <select
+        className="workflow-widget__select styled-select workflow_select_mailing"
+        defaultValue={1}
+        id="mailing_list_id"
+        name="listId"
+        onChange={[Function]}
+      >
+        <option
+          value=""
+        >
+          Select
+        </option>
+        <option
+          value={1}
+        >
+          Option 1
+        </option>
+        <option
+          value={2}
+        >
+          Option 2
+        </option>
+      </select>
+    </div>
+    <div
+      className="workflow-widget _validation-message"
+    >
+      <div
+        className="workflow-widget__validation-message"
+      >
+        Select mailing list
+      </div>
+    </div>
+    <div
+      className="workflow-widget _save-block"
+    >
+      <button
+        className="main-button"
+        disabled={false}
+        onClick={[Function]}
+      >
+        Save
+      </button>
+    </div>
+  </div>
+</div>
+`;

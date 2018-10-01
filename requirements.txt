@@ -1,0 +1,12 @@
+django
+psycopg2
+requests[security]
+requests_oauthlib
+pymongo
+djangorestframework
+django-rest-swagger
+django-loginas
+django-session-security
+django-settings-export
+django-sslserver
+django-cors-headers

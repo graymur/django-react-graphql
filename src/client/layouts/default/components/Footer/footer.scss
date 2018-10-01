@@ -1,0 +1,51 @@
+@import "~style/lib";
+
+.footer {
+    box-sizing: border-box;
+    min-height: 20rem;
+    background: #f7f9fb;
+    border-top: 2px solid #ebedee;
+
+    &__col {
+        padding-bottom: 1.5rem;
+
+        &._logo {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            @include tabletAndMore() {
+                min-height: 20rem;
+            }
+        }
+    }
+
+    &__logo {
+        display: block;
+        width: 11rem;
+        height: 3rem;
+        margin-top: 3rem;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-image: url(~img/logo_apination.svg);
+    }
+
+    &__copy {
+        font-size: 1.2rem;
+        color: #b7b7b7;
+    }
+
+    &__nav {
+        padding-top: 3.5rem;
+
+        @media (min-width: 992px) {
+            padding-top: 4.5rem;
+        }
+
+        &__item {
+            color: $base-font-color;
+            display: block;
+            margin-bottom: 1.5rem;
+        }
+    }
+}

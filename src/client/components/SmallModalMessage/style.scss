@@ -1,0 +1,28 @@
+.small-modal-message {
+    color: white;
+    background: rgba(0, 0, 0, 0.75);
+    padding: 1.5rem 3rem;
+    position: fixed;
+    left: 50%;
+    bottom: 4rem;
+    transform: translate(-50%, 0);
+    border-radius: 3px;
+    z-index: 999;
+    animation: small-modal-message 3s forwards;
+    white-space: nowrap;
+}
+
+@keyframes small-modal-message {
+    0% {
+        bottom: 3rem;
+        opacity: 0;
+    }
+    10%, 90% {
+        bottom: 4rem;
+        opacity: 1;
+    }
+    100% {
+        bottom: 3rem;
+        opacity: 0;
+    }
+}

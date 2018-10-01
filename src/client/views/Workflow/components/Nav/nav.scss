@@ -1,0 +1,50 @@
+@import "~style/lib";
+
+.workflow__nav {
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid $gray-color;
+
+    &__item {
+        flex: 0 0 auto;
+        width: 25%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $gray-color;
+        text-transform: uppercase;
+        transition: color $transition-speed;
+        cursor: pointer;
+        
+        &:hover {
+            text-decoration: none;
+        }
+
+        SPAN {
+            position: relative;
+            line-height: 4rem;
+
+            &:after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: -2px;
+                height: 2px;
+                width: 100%;
+                background-color: transparent;
+                transition: background-color $transition-speed;
+            }
+        }
+
+        &.active {
+            color: #7D8B91;
+
+            SPAN {
+                &:after {
+                    background-color: $orange-color;
+                }
+            }
+        }
+
+    }
+}

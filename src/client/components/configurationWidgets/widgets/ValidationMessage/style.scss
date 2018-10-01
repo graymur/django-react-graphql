@@ -1,0 +1,7 @@
+.workflow-widget__validation-message {
+    display: none;
+
+    &._active {
+        display: block;
+    }
+}

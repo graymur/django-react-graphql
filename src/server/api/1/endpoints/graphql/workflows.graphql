@@ -1,0 +1,61 @@
+type Query {
+    workflows: [Workflow],
+    workflow(id: String!, name: String!): Workflow,
+}
+
+type Workflow {
+    _id: ID,
+    status: String,
+    apps: [App],
+    connectionObjects: [Connection],
+    id: String,
+    is_enabled: Boolean,
+    name: String,
+    short_description: String,
+    full_description: String,
+    about: String,
+    config: JSON,
+    connections: JSON,
+    configuration: JSON,
+    saved_params: JSON,
+    workflow: JSON,
+    cron_params: JSON,
+}
+
+input WorkflowInput {
+    _id: String,
+    status: String,
+    connectionObjects: [ConnectionInput],
+    id: String,
+    name: String,
+    short_description: String,
+    full_description: String,
+    about: String,
+    config: JSON,
+    connections: JSON,
+    configuration: JSON,
+    workflow: JSON,
+}
+
+input WidgetsValuesInput {
+    appName: String,
+    groupIndex: Int!,
+    values: JSON!,
+}
+
+input DynamicWorkflowAppInput {
+    name: String,
+    entity: String,
+}
+
+#input DynamicWorkflowAppInput {
+#    name: String,
+#    entity: String,
+#}
+
+type Mutation {
+    saveWorkflowConnections(workflow: WorkflowInput!, connections: [ConnectionInput]): Workflow,
+    setWorkflowActiveState(workflow: WorkflowInput!, active: Boolean): Workflow,
+    setWorkflowWidgetsGroup(workflow: WorkflowInput!, widgetsValues: WidgetsValuesInput): Workflow,
+    createDynamicWorkflow(from: DynamicWorkflowAppInput!, to: DynamicWorkflowAppInput!): Workflow,
+}

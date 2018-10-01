@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should accept additional class name 1`] = `
+<span
+  className="test-class-name loader"
+  style={
+    Object {
+      "border": "10px solid #f3f3f3",
+      "borderTop": "10px solid #3498db",
+      "height": "50px",
+      "width": "50px",
+    }
+  }
+/>
+`;
+
+exports[`should have correct width, height and border 1`] = `
+<span
+  className="loader loader"
+  style={
+    Object {
+      "border": "20px solid #f3f3f3",
+      "borderTop": "20px solid #3498db",
+      "height": "100px",
+      "width": "100px",
+    }
+  }
+/>
+`;
+
+exports[`should render an <span> tag 1`] = `
+<span
+  className="loader"
+  style={
+    Object {
+      "border": "10px solid #f3f3f3",
+      "borderTop": "10px solid #3498db",
+      "height": "50px",
+      "width": "50px",
+    }
+  }
+/>
+`;

@@ -1,0 +1,15 @@
+@import "~style/lib";
+
+.mapper {
+    position: relative;
+
+    &__auto-button {
+        font-size: 1.4rem;
+        margin-bottom: 2rem;
+    }
+
+    &__container {
+        display: flex;
+        width: 100%;
+    }
+}

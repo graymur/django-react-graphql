@@ -1,0 +1,15 @@
+.workflow-widget {
+    margin-bottom: 3rem;
+
+    &._header {
+        margin-bottom: 1rem;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &.hidden, .hidden {
+        display: none;
+    }
+}

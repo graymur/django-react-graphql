@@ -1,0 +1,40 @@
+module.exports = {
+	items: [
+		{
+			date: '2018-02-28T10:39:12.982Z',
+			_id: '5a9686d0a02d35001a879535',
+			trigger_id: '5a8ea1560a06a4000411cd70',
+			message: 'missing ) after argument list',
+			uid: '5a9686d8c4b856000f4b216c',
+			workflow_run_id: '5a9686d8c4b856000f4b216c',
+			status: 'Fail',
+		},
+		{
+			date: '2018-02-28T10:39:12.808Z',
+			_id: '5a9686d0a02d35001a879533',
+			trigger_id: '5a8ea1560a06a4000411cd70',
+			message: '4 Paymentmethods retrieved',
+			uid: '5a9686d8c4b856000f4b216c',
+			workflow_run_id: '5a9686d8c4b856000f4b216c',
+			status: 'Success',
+		},
+		{
+			date: '2018-02-28T10:39:09.364Z',
+			_id: '5a9686cda02d35001a879527',
+			trigger_id: '5a8ea1560a06a4000411cd70',
+			message: '188 objects filtered, 5 objects left after filtering',
+			uid: '5a9686d8c4b856000f4b216c',
+			workflow_run_id: '5a9686d8c4b856000f4b216c',
+			status: 'Success',
+		},
+		{
+			date: '2018-02-28T10:39:08.767Z',
+			_id: '5a9686cca02d35001a879521',
+			trigger_id: '5a8ea1560a06a4000411cd70',
+			message: '193 subscription__cs retrieved',
+			uid: '5a9686d8c4b856000f4b216c',
+			workflow_run_id: '5a9686d8c4b856000f4b216c',
+			status: 'Success',
+		},
+	],
+}

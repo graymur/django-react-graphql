@@ -1,0 +1,26 @@
+<svg width="44" height="44" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Canvas" transform="translate(-2066 8322)">
+        <g id="Group 6">
+            <g id="Group 5">
+                <g id="Oval 4 Copy 2">
+                    <use xlink:href="#path0_stroke" transform="translate(2067 -8321)" fill="#fe3702"/>
+                    <polygon fill="#fe3702" transform="translate(2067 -8321)" points="18,11 28,21 18,31 "/>
+                </g>
+                <!--<g id="Fill 23">-->
+                    <!--<use xlink:href="#path1_fill" transform="translate(2072 -8316)" fill="#fe3702"/>-->
+                <!--</g>-->
+            </g>
+            <!--<g id="Rectangle 7">-->
+                <!--<use xlink:href="#path2_fill" transform="translate(2083 -8306)" fill="#7D8B91"/>-->
+            <!--</g>-->
+            <!--<g id="Rectangle 7">-->
+                <!--<use xlink:href="#path2_fill" transform="translate(2089.67 -8306)" fill="#7D8B91"/>-->
+            <!--</g>-->
+        </g>
+    </g>
+    <defs>
+        <path id="path0_stroke" d="M 21 43C 33.1503 43 43 33.1503 43 21L 41 21C 41 32.0457 32.0457 41 21 41L 21 43ZM 43 21C 43 8.84974 33.1503 -1 21 -1L 21 1C 32.0457 1 41 9.95431 41 21L 43 21ZM 21 -1C 8.84974 -1 -1 8.84974 -1 21L 1 21C 1 9.95431 9.95431 1 21 1L 21 -1ZM -1 21C -1 33.1503 8.84974 43 21 43L 21 41C 9.95431 41 1 32.0457 1 21L -1 21Z"/>
+        <path id="path1_fill" fill-rule="evenodd" d="M 16.0001 2.66699C 8.64808 2.66699 2.66675 8.64832 2.66675 16.0003C 2.66675 23.3523 8.64808 29.3337 16.0001 29.3337C 23.3521 29.3337 29.3334 23.3523 29.3334 16.0003C 29.3334 8.64832 23.3521 2.66699 16.0001 2.66699L 16.0001 2.66699ZM 16 32C 7.17733 32 0 24.8227 0 16C 0 7.17733 7.17733 0 16 0C 24.8227 0 32 7.17733 32 16C 32 24.8227 24.8227 32 16 32L 16 32Z"/>
+        <path id="path2_fill" fill-rule="evenodd" d="M 0 0L 3.33333 0L 3.33333 12L 0 12L 0 0Z"/>
+    </defs>
+</svg>

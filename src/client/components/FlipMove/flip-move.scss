@@ -1,0 +1,26 @@
+@import "~style/lib";
+
+$max-items: 30;
+
+.mapper__app__fields-abs {
+    position: relative;
+
+    @for $i from 0 through $max-items {
+        &._#{$i + 1} {
+            height: #{($i + 1) * 6rem};
+        }
+    }
+
+    &__item {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        transition: top $transition-speed;
+
+        @for $i from 0 through $max-items {
+            &._#{$i + 1} {
+                top: #{$i * 6rem};
+            }
+        }
+    }
+}

@@ -1,0 +1,334 @@
+@import "~style/lib";
+
+.app-logo {
+    text-indent: -9999px;
+    width: 12.8rem;
+    height: 12.8rem;
+
+    display: flex;
+    align-content: center;
+
+    background-image: none !important;
+
+    &._small {
+        transform-origin: 0 0;
+        transform: scale(0.5);
+    }
+
+    IMG {
+        display: block;
+        max-height: 100%;
+        max-width: 100%;
+        object-fit: contain;
+    }
+}
+
+//.app-logo-cn_gcal {
+//    background-image: url(~img/logos/gcal_128.png);
+//}
+//
+//.app-logo-cn_gdrive {
+//    background-position: -197px 0;
+//}
+//
+//.app-logo-cn_qbo, .app-logo-cn_qbd {
+//    background-image: url(~img/logos/qbo_logo.png);
+//}
+//
+//.app-logo-cn_sf {
+//    background-image: url(~img/logos/salesforce_partner_logo.png);
+//}
+//
+//.app-logo-cn_mls_trendrets {
+//    background-image: url(~img/logos/trend_128x128.png);
+//}
+//
+//.app-logo-cn_mls_triangle {
+//    background-image: url(~img/logos/triangle_128x128.png);
+//}
+//
+//.app-logo-cn_mls_mred {
+//    background-image: url(~img/logos/mred_128x128.png);
+//}
+//
+//.app-logo-cn_mls_carolina {
+//    background-image: url(~img/logos/carolina_128x128.png);
+//}
+//
+//.app-logo-cn_mls_glvar {
+//    background-image: url(~img/logos/glvar_128x128.png);
+//}
+//
+//.app-logo-cn_mls_armls {
+//    background-image: url(~img/logos/armls_128x128.png);
+//}
+//
+//.app-logo-cn_mls_creb {
+//    background-image: url(~img/logos/creb_128x128.png);
+//}
+//
+//.app-logo-cn_mls_bak {
+//    background-image: url(~img/logos/bak_128x128.png);
+//}
+//
+//.app-logo-cn_mls_ga {
+//    background-image: url(~img/logos/gamls_128x128.png);
+//}
+//
+//.app-logo-cn_mls_mob {
+//    background-image: url(~img/logos/mobmls_128x128.png);
+//}
+//
+//.app-logo-cn_mls_f, .app-logo-cn_mls_fmls {
+//    background-image: url(~img/logos/fmls_128x128.png);
+//}
+//
+//.app-logo-cn_mls_sabor {
+//    background-image: url(~img/logos/sabor_128x128.png);
+//}
+//
+//.app-logo-cn_mls_gardenstate {
+//    background-image: url(~img/logos/gsmls_128x128.png);
+//}
+//
+//.app-logo-cn_mls_rasm {
+//    background-image: url(~img/logos/rasm_128x128.png);
+//}
+//
+//.app-logo-cn_mls_genris {
+//    background-image: url(~img/logos/genris_128x128.png);
+//}
+//
+//.app-logo-cn_mls_actris {
+//    background-image: url(~img/logos/actris_128x128.png);
+//}
+//
+//.app-logo-cn_mls_recolorado {
+//    background-image: url(~img/logos/recolorado_128x128.png);
+//}
+//
+//.app-logo-cn_mls_sandicor {
+//    background-image: url(~img/logos/sandicor_128x128.png);
+//}
+//
+//.app-logo-cn_mls_kaar {
+//    background-image: url(~img/logos/kaar_128x128.png);
+//}
+//
+//.app-logo-cn_mls_akmls {
+//    background-image: url(~img/logos/akmls_128x128.png);
+//}
+//
+//.app-logo-cn_facebook {
+//    background-image: url(~img/logos/fb_128x128.png);
+//}
+//
+//.app-logo-cn_mls_waco {
+//    background-image: url(~img/logos/waco_128x128.png);
+//}
+//
+//.app-logo-cn_tribus {
+//    background-image: url(~img/logos/tribus_crm_128x128.png);
+//}
+//
+//.app-logo-cn_mailchimp {
+//    background-image: url(~img/logos/mailchimp_128x128.png);
+//}
+//
+//.app-logo-cn_mls_ppmls {
+//    background-image: url(~img/logos/ppmls_128x128.png);
+//}
+//
+//.app-logo-cn_mls_ires {
+//    background-image: url(~img/logos/ires_128x128.png);
+//}
+//
+//.app-logo-cn_mls_fhaar {
+//    background-image: url(~img/logos/fhaar_128x128.png);
+//}
+//
+//.app-logo-cn_mls {
+//    background-image: url(~img/logos/mls.svg);
+//}
+//
+//.app-logo-cn_mailchimp {
+//    background-image: url(~img/logos/mailchimp_128x128.png);
+//}
+//
+//.app-logo-cn_zillow {
+//    background-image: url(~img/logos/zillow_128x128.png);
+//}
+//
+//.app-logo-cn_hotpads {
+//    background-image: url(~img/logos/hotpads_128x128.png);
+//}
+//
+//.app-logo-cn_mls_lar {
+//    background-image: url(~img/logos/lar_128x128.png);
+//}
+//
+//.app-logo-cn_mls_nky {
+//    background-image: url(~img/logos/nkmls_128x128.png);
+//}
+//
+//.app-logo-cn_mls_miami {
+//    background-image: url(~img/logos/mls_miami_128x128.png);
+//}
+//
+//.app-logo-cn_tpn {
+//    background-image: url(~img/logos/tpni_engage_128x128.png);
+//}
+//
+//.app-logo-cn_mls_mfr {
+//    background-image: url(~img/logos/mfrmls_128x128.png);
+//}
+//
+//.app-logo-cn_mls_realcomp {
+//    background-image: url(~img/logos/realcomp_128x128.png);
+//}
+//
+//.app-logo-cn_mls_nwmls {
+//    background-image: url(~img/logos/nwmls_128x128.png);
+//}
+//
+//.app-logo-cn_mls_realtracs {
+//    background-image: url(~img/logos/realtracs_128x128.png);
+//}
+//
+//.app-logo-cn_mls_ntreis {
+//    background-image: url(~img/logos/ntreis_128x128.png);
+//}
+//
+//.app-logo-cn_mls_mris {
+//    background-image: url(~img/logos/mris_128x128.png);
+//}
+//
+//.app-logo-cn_mls_crmls {
+//    background-image: url(~img/logos/crmls_128x128.png);
+//}
+//
+//.app-logo-cn_mls_wfr {
+//    background-image: url(~img/logos/ure_128x128.png);
+//}
+//
+//.app-logo-cn_mls_crmls_ny {
+//    background-image: url(~img/logos/capital_region_128x128.png);
+//}
+//
+//.app-logo-cn_mls_louisville {
+//    background-image: url(~img/logos/louisville_128x128.png);
+//}
+//
+//.app-logo-cn_mls_sira {
+//    background-image: url(~img/logos/sira_128x128.png);
+//}
+//
+//.app-logo-cn_mls_metrolist {
+//    background-image: url(~img/logos/metrolist_128x128.png);
+//}
+//
+//.app-logo-cn_mls_bakersfield {
+//    background-image: url(~img/logos/bak_128x128.png);
+//}
+//
+//.app-logo-cn_mls_gulfcoastal {
+//    background-image: url(~img/logos/gulfcoast_128x128.png);
+//}
+//
+//.app-logo-cn_mls_syaor {
+//    background-image: url(~img/logos/syaor_128x128.png);
+//}
+//
+//.app-logo-cn_mls_nores {
+//    background-image: url(~img/logos/nores_128x128.png);
+//}
+//
+//.app-logo-cn_mls_har {
+//    background-image: url(~img/logos/har_128x128.png);
+//}
+//
+//.app-logo-cn_mls_nsar {
+//    background-image: url(~img/logos/nsar_128x128.png);
+//}
+//
+//.app-logo-cn_mls_lcar {
+//
+//    background-image: url(~img/logos/lcar_128x128.png);
+//
+//}
+//
+//.app-logo-cn_mls_hcar {
+//    background-image: url(~img/logos/hcar_128x128.png);
+//}
+//
+//.app-logo-cn_mls_rein {
+//    background-image: url(~img/logos/rein_128x128.png);
+//}
+//
+//.app-logo-cn_mls_statewide {
+//    background-image: url(~img/logos/statewide_128x128.png);
+//}
+//
+//.app-logo-cn_bs {
+//    background-image: url(~img/logos/brokersumo_128x128.png);
+//}
+//
+//.app-logo-cn_mls_gsrein {
+//    background-image: url(~img/logos/gsrein_128x128.png);
+//}
+//
+//.app-logo-cn_convoso {
+//    background-image: url(~img/logos/convoso_128x128.png);
+//}
+//
+//.app-logo-cn_excel {
+//    background-image: url(~img/logos/Excel-icon.png);
+//}
+//
+//.app-logo-cn_mls_somo {
+//    background-image: url(~img/logos/somo_128x128.png);
+//}
+//
+//.app-logo-cn_google_contacts {
+//    background-image: url(~img/logos/google_contacts_logo.png);
+//}
+//
+//.app-logo-cn_realgeek {
+//   background-image: url(~img/logos/realgeeks_logo.png);
+//}
+//
+//.app-logo-cn_zoho_reports {
+//    background-image: url(~img/logos/zoho_reports_128x128.png);
+//}
+//
+//.app-logo-cn_dotloop {
+//    background-image: url(~img/logos/cn_dotloop.png);
+//}
+//
+//.app-logo-cn_jobnimbus {
+//    background-image: url(~img/logos/cn_job_nimbus.png);
+//}
+//
+//.app-logo-cn_google_docs {
+//    background-image: url(~img/logos/cn_google_docs.png);
+//}
+//
+//.app-logo-cn_google_sheets {
+//    background-image: url(~img/logos/cn_google_sheets.png);
+//}
+//
+//.app-logo-cn_docusign {
+//    background-image: url(~img/logos/docusign_128x128.png);
+//}
+//
+//.app-logo-cn_qualer {
+//    background-image: url(~img/logos/cn_qualer_128x128.png);
+//}
+//
+//.app-logo-cn_sage50 {
+//    background-image: url(~img/logos/sage_50_256.png);
+//}
+//
+//.app-logo-cn_rio_genesis {
+//    background-image: url(~img/logos/RIOGenesis_128x128.png);
+//}

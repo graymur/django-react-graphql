@@ -1,0 +1,191 @@
+@import "~style/lib";
+
+:root {
+    --page-transition-speed: 0.3s;
+}
+
+*, :before, :after {
+    box-sizing: border-box;
+}
+
+HTML {
+    font-size: 62.5%;
+    // TODO: find better solution for jumping scrollbar
+    overflow-y: scroll;
+}
+
+HTML, BODY {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+BODY {
+    font-family: $base-font-family;
+}
+
+#react-root {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 20rem;
+}
+
+.main {
+    flex: 1 0 auto;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    font: $base-font;
+    color: $base-font-color;
+
+    & > SPAN {
+        display: block;
+    }
+
+    .content {
+        flex-grow: 1;
+        position: relative;
+        overflow: hidden;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    .page-switch-enter {
+        position: relative;
+        z-index: 2;
+        animation: fadeIn;
+        animation-fill-mode: forwards;
+        animation-duration: var(--page-transition-speed);
+    }
+
+    .page-switch-leave {
+        position: absolute;
+        left: 15px;
+        top: 0;
+        width: calc(100% - 30px);
+        z-index: 1;
+        animation: fadeOut;
+        animation-fill-mode: forwards;
+        animation-duration: var(--page-transition-speed);
+    }
+}
+
+A {
+    &:hover {
+        color: $orange-color;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.styled-select {
+    @extend %select-dropdown;
+    @extend %input-base;
+    background-repeat: no-repeat;
+    background-position: right 1.5rem center;
+
+    -moz-appearance: none;
+    -webkit-appearance: none;
+
+    &::-ms-expand {
+        display: none;
+    }
+}
+
+.main-button {
+    position: relative;
+
+    border-radius: 5px;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    border: 0;
+
+    outline: none;
+
+    cursor: pointer;
+
+    transition: opacity $transition-speed;
+
+    white-space: nowrap;
+
+    @include mobile() {
+        font: 600 1.4rem/3rem $base-font-medium;
+        padding: 0 2.5rem;
+    }
+
+    @include tablet() {
+        font: 600 1.4rem/3.5rem $base-font-medium;
+        padding: 0 3rem;
+    }
+
+    @include min-screen($desktop) {
+        font: 600 1.6rem/4rem $base-font-medium;
+        padding: 0 4rem;
+    }
+
+    &[disabled] {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+
+    &:active {
+        top: 1px;
+        left: 1px;
+    }
+
+    &:not(._light) {
+        color: #FFFFFF;
+        background: $orange-color;
+    }
+
+    &._light {
+        color: $orange-color;
+        background-color: white;
+    }
+}
+
+.app-connected {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+
+    position: absolute;
+    right: -1rem;
+    bottom: -0.5rem;
+
+    @extend %active-connection;
+
+    &__wr {
+        position: relative;
+        display: inline-block;
+    }
+}
+
+@import "fonts";

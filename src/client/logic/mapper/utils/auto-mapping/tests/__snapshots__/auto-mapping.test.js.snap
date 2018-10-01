@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`maps based on config 1`] = `
+Array [
+  Object {
+    "constraintsMessages": Array [],
+    "from": "from_firstName",
+    "to": "to_firstName",
+  },
+  Object {
+    "constraintsMessages": Array [],
+    "from": "from_lastName",
+    "to": "to_lastName",
+  },
+  Object {
+    "constraintsMessages": Array [],
+    "from": "from_email",
+    "to": "to_email",
+  },
+]
+`;
+
+exports[`maps based on fields names 1`] = `
+Array [
+  Object {
+    "constraintsMessages": Array [],
+    "from": "from_first_space_Name",
+    "to": "to_first_Name",
+  },
+  Object {
+    "constraintsMessages": Array [],
+    "from": "from_last_space_Name",
+    "to": "to_last-Name",
+  },
+  Object {
+    "constraintsMessages": Array [],
+    "from": "fromemail",
+    "to": "to_e.mail",
+  },
+]
+`;
+
+exports[`maps both 1`] = `
+Array [
+  Object {
+    "constraintsMessages": Array [],
+    "from": "from_firstName",
+    "to": "to_firstName",
+  },
+  Object {
+    "constraintsMessages": Array [],
+    "from": "from_lastName",
+    "to": "to_lastName",
+  },
+  Object {
+    "constraintsMessages": Array [],
+    "from": "from_email",
+    "to": "to_email",
+  },
+  Object {
+    "constraintsMessages": Array [],
+    "from": "from_first_space_Name",
+    "to": "to_first_Name",
+  },
+  Object {
+    "constraintsMessages": Array [],
+    "from": "from_last_space_Name",
+    "to": "to_last-Name",
+  },
+  Object {
+    "constraintsMessages": Array [],
+    "from": "fromemail",
+    "to": "to_e.mail",
+  },
+]
+`;

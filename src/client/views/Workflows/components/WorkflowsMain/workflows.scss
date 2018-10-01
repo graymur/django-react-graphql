@@ -1,0 +1,12 @@
+@import "~style/lib";
+
+.workflows {
+    &__list {
+        display: block;
+
+        &__item {
+            display: block;
+            margin-bottom: .5em;
+        }
+    }
+}

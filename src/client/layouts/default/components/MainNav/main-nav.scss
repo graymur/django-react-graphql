@@ -1,0 +1,38 @@
+@import "~style/lib";
+
+.main-menu {
+    padding: 0;
+    height: 100%;
+
+    &__wr {
+        margin-left: auto;
+        position: relative;
+        background: white;
+
+        @include mobile() {
+            margin-left: -1.5rem;
+            margin-right: -1.5rem;
+            border-top: 1px solid #fe3702;
+            box-shadow: 0 1px 3px rgba(0,0,0,.2)
+        }
+
+        @include tabletAndMore() {
+            flex-grow: 0;
+            height: 100%;
+        }
+    }
+
+    &__list {
+        height: 100%;
+        background: white;
+    }
+
+    .logo {
+        height: 100%;
+        width: 11rem;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-image: url(~img/logo_apination.svg);
+        display: block;
+    }
+}

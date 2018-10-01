@@ -1,0 +1,54 @@
+@import "~style/lib";
+
+.workflow-settings {
+    padding-top: 3rem;
+
+    &__group {
+        max-width: 60rem;
+        margin: 4rem auto 0 auto;
+
+        &__type {
+            font: 600 1.8rem $base-font-regular;
+            color: #4A4A4A;
+            margin-bottom: 2rem;
+        }
+
+        &__title {
+            font: 600 1.8rem $base-font-regular;
+            color: #4A4A4A;
+            margin-bottom: 0;
+        }
+
+        &__header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 3rem;
+            cursor: pointer;
+
+            .app-logo {
+                height: 4rem;
+                width: auto;
+                margin-right: 2rem;
+            }
+        }
+
+        &__wr {
+            padding: 3rem;
+            /* Rectangle 5 Copy 2 */
+
+            background: #FFFFFF;
+            box-shadow: 0 0 3.2rem rgba(0, 0, 0, 0.108469);
+            border-radius: 0.8rem;
+
+            overflow: hidden;
+
+            max-height: 10rem;
+
+            transition: max-height $transition-speed;
+
+            &._active {
+                max-height: 100rem;
+            }
+        }
+    }
+}

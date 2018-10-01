@@ -1,0 +1,73 @@
+@import "~style/lib";
+
+.bm-i {
+    line-height: 1.5;
+
+    .apps-pair {
+        margin-bottom: 2rem;
+    }
+
+    .col-form-label {
+        font-size: 1.6rem;
+    }
+
+    &__connections {
+        //margin-bottom: 2rem;
+    }
+
+    &__connection {
+        margin-bottom: 0.5rem;
+
+        &:last-child {
+            margin-bottom: 2rem;
+        }
+
+        &__title {
+            display: inline-block;
+            margin-right: 0.5rem;
+        }
+
+        &__value {
+            display: inline-block;
+            width: auto;
+        }
+    }
+
+    .form-check-label {
+        margin-left: 0.5rem;
+    }
+
+    .form-check {
+        margin-bottom: 0.3rem;
+    }
+
+    .btn, SELECT, INPUT, TEXTAREA {
+        font-size: 1.4rem;
+    }
+
+    &._saving {
+        opacity: 0.75;
+        pointer-events: none;
+    }
+
+    SELECT, INPUT[type="text"] {
+        height: 3rem;
+    }
+
+    &__errors {
+        color: $orange-color;
+        margin-bottom: 3rem;
+    }
+
+    &__item {
+        &._invalid {
+            .col-form-label {
+                color: $orange-color;
+            }
+        }
+    }
+
+    .workflow-settings__group__wr {
+        margin-bottom: 3rem;
+    }
+}

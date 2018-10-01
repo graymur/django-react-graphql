@@ -1,0 +1,16 @@
+type Query {
+    bMInterfaceStoredValues: BMInterfaceStoredValues,
+}
+
+type BMInterfaceStoredValues {
+    _id: ID!,
+    values: JSON
+}
+
+input BIValuesInput {
+    values: JSON!,
+}
+
+type Mutation {
+    saveBIValues(values: BIValuesInput!): BMInterfaceStoredValues,
+}

@@ -1,0 +1,80 @@
+module.exports = () => [
+	{ sparse: true, Id: '56', DisplayName: "Bob's Burger Joint" },
+	{
+		sparse: true,
+		Id: '30',
+		DisplayName: 'Books by Bessie',
+	},
+	{ sparse: true, Id: '31', DisplayName: 'Brosnahan Insurance Agency' },
+	{
+		sparse: true,
+		Id: '32',
+		DisplayName: 'Cal Telephone',
+	},
+	{ sparse: true, Id: '33', DisplayName: "Chin's Gas and Oil" },
+	{
+		sparse: true,
+		Id: '34',
+		DisplayName: 'Cigna Health Care',
+	},
+	{ sparse: true, Id: '35', DisplayName: 'Computers by Jenni' },
+	{
+		sparse: true,
+		Id: '36',
+		DisplayName: "Diego's Road Warrior Bodyshop",
+	},
+	{ sparse: true, Id: '37', DisplayName: 'EDD' },
+	{
+		sparse: true,
+		Id: '38',
+		DisplayName: 'Ellis Equipment Rental',
+	},
+	{ sparse: true, Id: '39', DisplayName: 'Fidelity' },
+	{
+		sparse: true,
+		Id: '40',
+		DisplayName: 'Hall Properties',
+	},
+	{ sparse: true, Id: '41', DisplayName: 'Hicks Hardware' },
+	{
+		sparse: true,
+		Id: '42',
+		DisplayName: 'Lee Advertising',
+	},
+	{ sparse: true, Id: '43', DisplayName: 'Mahoney Mugs' },
+	{
+		sparse: true,
+		Id: '44',
+		DisplayName: 'Met Life Dental',
+	},
+	{ sparse: true, Id: '45', DisplayName: 'National Eye Care' },
+	{
+		sparse: true,
+		Id: '46',
+		DisplayName: 'Norton Lumber and Building Materials',
+	},
+	{ sparse: true, Id: '48', DisplayName: 'PG&E' },
+	{
+		sparse: true,
+		Id: '47',
+		DisplayName: 'Pam Seitz',
+	},
+	{ sparse: true, Id: '49', DisplayName: 'Robertson & Associates' },
+	{
+		sparse: true,
+		Id: '57',
+		DisplayName: 'Squeaky Kleen Car Wash',
+	},
+	{ sparse: true, Id: '50', DisplayName: "Tania's Nursery" },
+	{
+		sparse: true,
+		Id: '51',
+		DisplayName: 'Tim Philip Masonry',
+	},
+	{ sparse: true, Id: '52', DisplayName: 'Tony Rondonuwu' },
+	{
+		sparse: true,
+		Id: '53',
+		DisplayName: 'United States Treasury',
+	},
+]

@@ -1,0 +1,29 @@
+@import "~style/lib";
+
+.main-menu__toggler {
+    display: block;
+    position: relative;
+    padding: 1rem;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 4px;
+
+    margin: 7px;
+
+    &:focus {
+        outline: none;
+    }
+
+    &__bar {
+        width: 3.2rem;
+        height: 0.5rem;
+        border: 1px solid #666;
+        background-color: #666;
+        transition: background-color .2s linear;
+        display: block;
+
+        & + & {
+            margin-top: 0.4rem;
+        }
+    }
+}

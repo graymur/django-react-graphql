@@ -1,0 +1,29 @@
+$gray-color: #cecece;
+$green-color: #65ce9e;
+$orange-color: #fe3702;
+$base-font-family: 'Work Sans', serif;
+$fancy-font-family: 'Abhaya Libre', serif;
+
+$light-orange: #ffa134;
+$green: #29cd45;
+$light-green: #53a93f;
+$brokermint: #20a7ad;
+$brokersumo: #da0100;
+
+$base-font-size: 1.4rem;
+$base-line-height: 1.286; // 1.8rem
+$base-font-regular: 'AvenirNext-Regular';
+$base-font-medium: 'AvenirNext-Medium';
+$base-font-bold: 'AvenirNext-Bold';
+$base-font: #{$base-font-size}/#{$base-line-height} $base-font-medium;
+$base-font-color: #7d8b91;
+
+$desktop-big: 1200px;
+$desktop: 1000px;
+$tablet: 768px;
+
+$mapper-item-height: 7rem;
+$mapper-item-vertical-gap: 2rem;
+$mapper-max-items: 30;
+
+$transition-speed: 0.4s;

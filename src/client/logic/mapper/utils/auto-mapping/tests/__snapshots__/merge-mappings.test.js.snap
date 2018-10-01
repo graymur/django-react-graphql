@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`merges mappings 1`] = `
+Array [
+  Object {
+    "from": "from_firstName",
+    "to": "to_firstName",
+  },
+  Object {
+    "from": "from_lastName",
+    "to": "to_lastName",
+  },
+  Object {
+    "from": "from_email",
+    "to": "to_email",
+  },
+  Object {
+    "from": "from_middleName",
+    "to": "to_middleName",
+  },
+  Object {
+    "from": "from_phone",
+    "to": "to_phone",
+  },
+]
+`;

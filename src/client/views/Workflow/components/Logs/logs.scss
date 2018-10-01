@@ -1,0 +1,160 @@
+@import "~style/lib";
+
+.logs {
+    margin-top: 5rem;
+    min-height: 15rem;
+
+    &._updating {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+
+    &__empty {
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    &__list {
+
+        &__item {
+            &__date {
+                padding-left: 2rem;
+                width: 20rem;
+            }
+
+            &__message {
+                word-wrap: break-word;
+            }
+
+            &__status {
+                width: 15rem;
+                //padding-right: 3rem;
+
+                &__badge {
+                    display: block;
+                    width: 12rem;
+
+                    font: 500 1.6rem/2.4rem $base-font-medium;
+                    text-align: center;
+
+                    color: #FFFFFF;
+                    border-radius: 0.4rem;
+
+                    &._success {
+                        background-color: #53a93f;
+                    }
+
+                    &._ignored {
+                        background-color: #bbb;
+                    }
+
+                    &._processed {
+                        background-color: #ff961a;
+                    }
+
+                    &._fail {
+                        background-color: #d73d32;
+                    }
+                }
+
+            }
+        }
+    }
+
+    &__sublogs {
+        &__empty {
+            text-align: center;
+            font-size: 1.6rem;
+        }
+    }
+
+    TABLE {
+        //max-width: 76rem;
+        max-width: 100%;
+        width: 100%;
+        margin: 0 auto;
+        //table-layout: fixed;
+
+        TH {
+            &:first-child {
+                padding-left: 2rem;
+            }
+        }
+
+        THEAD {
+            TH {
+                font-size: 1.4rem;
+                font-weight: normal;
+                padding-bottom: 2rem;
+            }
+        }
+
+        TBODY {
+            TR {
+                border: 2px solid #E9EFF4;
+                border-radius: 5px;
+
+                TD {
+                    user-select: none;
+                    height: 4.5rem;
+                    vertical-align: middle;
+                }
+
+                &._top, &._has-detailed-info {
+                    cursor: pointer;
+                }
+
+                &._top, &._sub {
+                    TD {
+                        padding-top: 1rem;
+                        padding-bottom: 1rem;
+                    }
+                }
+            }
+        }
+
+        TABLE {
+            table-layout: fixed;
+        }
+    }
+
+    ._sublogs {
+        background-color: #f7f7f7;
+
+        TABLE {
+
+            TBODY {
+                TR {
+                    border-top: 0;
+                    border-right: 0;
+                    border-bottom: 2px solid #E9EFF4;
+                    border-left: 0;
+
+                    &:last-child {
+                        border: 0;
+                    }
+                }
+            }
+        }
+
+        .string {
+            color: green;
+        }
+
+        .number {
+            color: darkorange;
+        }
+
+        .boolean {
+            color: blue;
+        }
+
+        .null {
+            color: magenta;
+        }
+
+        .key {
+            color: red;
+        }
+    }
+}

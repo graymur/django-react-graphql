@@ -1,0 +1,7 @@
+@import "~style/lib";
+
+.app {
+    &._loading {
+        min-height: 20rem;
+    }
+}

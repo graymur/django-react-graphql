@@ -1,0 +1,480 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sets invalid widget value in state 1`] = `
+Object {
+  "initialWidgetsValues": Object {
+    "listId": undefined,
+    "trigger": "get_subscribers",
+    "visual-filter": undefined,
+    "visual-mapping": undefined,
+  },
+  "validationErrors": undefined,
+  "widgetsErrors": Object {
+    "listId": Object {
+      "code": 1,
+      "messageWidgetId": "list_id-error",
+    },
+    "trigger": false,
+    "visual-filter": undefined,
+    "visual-mapping": Object {
+      "code": 1,
+      "messageWidgetId": "",
+    },
+  },
+  "widgetsValues": Object {
+    "listId": false,
+    "trigger": "get_subscribers",
+    "visual-filter": undefined,
+    "visual-mapping": undefined,
+  },
+  "workflow": Object {
+    "__typename": "Workflow",
+    "_id": "5b6c4fb9b6e34d0bb03a3ccb",
+    "about": "",
+    "apps": Array [
+      Object {
+        "__typename": "App",
+        "full_name": "MailChimp",
+        "name": "cn_mailchimp",
+      },
+      Object {
+        "__typename": "App",
+        "full_name": "Dotloop",
+        "name": "cn_dotloop",
+      },
+    ],
+    "config": Object {
+      "cn_dotloop": Object {
+        "connect_id": "5b69ab94c409d8000439d835",
+        "full_name_app": "Dotloop",
+      },
+      "cn_mailchimp": Object {
+        "connect_id": "5b69a78ec409d8000439d833",
+        "saved_params": Object {
+          "listId": "29aaf507bc",
+          "trigger": "get_subscribers",
+        },
+      },
+      "global": Object {
+        "access_key": null,
+        "email": "sergey@apination.com",
+        "trigger_id": "5b6c4fb9b6e34d0bb03a3cca",
+        "user_id": 422,
+      },
+    },
+    "configuration": Array [
+      Object {
+        "app": "cn_mailchimp",
+        "label": "Trigger",
+        "title": "Create or update contact",
+        "validations": Array [
+          Object {
+            "message": "#list_id-error",
+            "type": "required",
+            "with": Array [
+              "mailing_list_id",
+            ],
+          },
+        ],
+        "widgets": Array [
+          Object {
+            "class": "hidden",
+            "name": "trigger",
+            "node": "input",
+            "type": "text",
+            "value": "get_subscribers",
+            "wrapper-class": "hidden",
+          },
+          Object {
+            "node": "header",
+            "text": "Mailing list",
+          },
+          Object {
+            "class": "workflow_select_mailing",
+            "data-method": "cn_mailchimp.get_mailing_lists",
+            "depend": "mapping",
+            "id": "mailing_list_id",
+            "method": Object {
+              "map": Object {
+                "text": "name",
+                "value": "id",
+              },
+              "method": "cn_mailchimp.get_mailing_lists",
+            },
+            "name": "listId",
+            "node": "select-with-refresh",
+            "raw-options": "<option selected disabled value=\\"CASE_NEED_SELECT\\" color:\\"#858585;\\">Select list</option>",
+          },
+          Object {
+            "id": "list_id-error",
+            "node": "validation-message",
+            "text": "Select mailing list",
+          },
+          Object {
+            "node": "save-block",
+          },
+        ],
+      },
+      Object {
+        "app": "cn_dotloop",
+        "label": "Action",
+        "title": "Create or update person",
+        "validations": Array [],
+        "widgets": Array [],
+      },
+      Object {
+        "app": "cn_mailchimp",
+        "groupClassName": "filter-widget",
+        "label": "Filter",
+        "title": "Filter contacts",
+        "widgets": Array [
+          Object {
+            "config": Object {
+              "appName": "cn_mailchimp",
+              "entityName": "subscriber",
+              "fields": Object {
+                "method": "cn_mailchimp.get_subscriber_config_trigger",
+                "params": Array [
+                  "listId",
+                ],
+              },
+            },
+            "id": "visual-filter",
+            "name": "visual-filter",
+            "node": "visual-filter",
+          },
+          Object {
+            "node": "save-block",
+          },
+        ],
+      },
+      Object {
+        "app": "cn_mailchimp",
+        "groupClassName": "mapping-widget",
+        "label": "Mapping",
+        "title": "MailChimp subscribers to Dotloop people",
+        "validations": Array [
+          Object {
+            "field": "visual-mapping",
+            "type": "required",
+          },
+        ],
+        "widgets": Array [
+          Object {
+            "config": Object {
+              "cn_dotloop": Object {
+                "appName": "cn_dotloop",
+                "entityName": "person",
+                "fields": Array [
+                  Object {
+                    "_id": "dotloopFirstName",
+                    "autoMapping": Object {
+                      "name": "firstName",
+                    },
+                    "sample": "John",
+                    "setter": "firstName",
+                    "title": "First name",
+                  },
+                  Object {
+                    "_id": "dotloopRole",
+                    "sample": "BUYER",
+                    "setter": "role",
+                    "title": "Role",
+                  },
+                ],
+              },
+              "cn_mailchimp": Object {
+                "appName": "cn_mailchimp",
+                "entityName": "subscriber",
+                "fields": Object {
+                  "method": "cn_mailchimp.get_subscriber_config_trigger",
+                  "params": Array [
+                    "listId",
+                  ],
+                },
+              },
+            },
+            "id": "visual-mapping",
+            "name": "visual-mapping",
+            "node": "visual-mapping",
+          },
+          Object {
+            "node": "save-block",
+          },
+        ],
+      },
+    ],
+    "connectionObjects": Array [],
+    "connections": Array [
+      "cn_mailchimp",
+      "cn_dotloop",
+    ],
+    "cron_params": Object {
+      "minutes": 10,
+    },
+    "full_description": "",
+    "is_enabled": false,
+    "name": "mailchimp_subscribers_to_dotloop_people",
+    "saved_params": Object {
+      "cn_mailchimp": Object {
+        "trigger": "get_subscribers",
+      },
+    },
+    "short_description": "",
+    "status": "unused",
+    "workflow": Array [
+      Object {
+        "cn_mailchimp_get_updated_subscribers": Object {
+          "apiKey": "$config.cn_mailchimp.params.apiKey",
+          "listId": "$config.cn_mailchimp.saved_params.listId",
+          "mainLogId": "$config.runtime.saga_id",
+        },
+      },
+      Object {
+        "cn_dotloop_update_contacts": Object {
+          "mainLogId": "$config.runtime.saga_id",
+          "token": "$config.cn_dotloop.params.token",
+        },
+      },
+    ],
+  },
+}
+`;
+
+exports[`Sets valid widget value in state 1`] = `
+Object {
+  "initialWidgetsValues": Object {
+    "listId": undefined,
+    "trigger": "get_subscribers",
+    "visual-filter": undefined,
+    "visual-mapping": undefined,
+  },
+  "validationErrors": undefined,
+  "widgetsErrors": Object {
+    "listId": false,
+    "trigger": false,
+    "visual-filter": undefined,
+    "visual-mapping": Object {
+      "code": 1,
+      "messageWidgetId": "",
+    },
+  },
+  "widgetsValues": Object {
+    "listId": 1,
+    "trigger": "get_subscribers",
+    "visual-filter": undefined,
+    "visual-mapping": undefined,
+  },
+  "workflow": Object {
+    "__typename": "Workflow",
+    "_id": "5b6c4fb9b6e34d0bb03a3ccb",
+    "about": "",
+    "apps": Array [
+      Object {
+        "__typename": "App",
+        "full_name": "MailChimp",
+        "name": "cn_mailchimp",
+      },
+      Object {
+        "__typename": "App",
+        "full_name": "Dotloop",
+        "name": "cn_dotloop",
+      },
+    ],
+    "config": Object {
+      "cn_dotloop": Object {
+        "connect_id": "5b69ab94c409d8000439d835",
+        "full_name_app": "Dotloop",
+      },
+      "cn_mailchimp": Object {
+        "connect_id": "5b69a78ec409d8000439d833",
+        "saved_params": Object {
+          "listId": "29aaf507bc",
+          "trigger": "get_subscribers",
+        },
+      },
+      "global": Object {
+        "access_key": null,
+        "email": "sergey@apination.com",
+        "trigger_id": "5b6c4fb9b6e34d0bb03a3cca",
+        "user_id": 422,
+      },
+    },
+    "configuration": Array [
+      Object {
+        "app": "cn_mailchimp",
+        "label": "Trigger",
+        "title": "Create or update contact",
+        "validations": Array [
+          Object {
+            "message": "#list_id-error",
+            "type": "required",
+            "with": Array [
+              "mailing_list_id",
+            ],
+          },
+        ],
+        "widgets": Array [
+          Object {
+            "class": "hidden",
+            "name": "trigger",
+            "node": "input",
+            "type": "text",
+            "value": "get_subscribers",
+            "wrapper-class": "hidden",
+          },
+          Object {
+            "node": "header",
+            "text": "Mailing list",
+          },
+          Object {
+            "class": "workflow_select_mailing",
+            "data-method": "cn_mailchimp.get_mailing_lists",
+            "depend": "mapping",
+            "id": "mailing_list_id",
+            "method": Object {
+              "map": Object {
+                "text": "name",
+                "value": "id",
+              },
+              "method": "cn_mailchimp.get_mailing_lists",
+            },
+            "name": "listId",
+            "node": "select-with-refresh",
+            "raw-options": "<option selected disabled value=\\"CASE_NEED_SELECT\\" color:\\"#858585;\\">Select list</option>",
+          },
+          Object {
+            "id": "list_id-error",
+            "node": "validation-message",
+            "text": "Select mailing list",
+          },
+          Object {
+            "node": "save-block",
+          },
+        ],
+      },
+      Object {
+        "app": "cn_dotloop",
+        "label": "Action",
+        "title": "Create or update person",
+        "validations": Array [],
+        "widgets": Array [],
+      },
+      Object {
+        "app": "cn_mailchimp",
+        "groupClassName": "filter-widget",
+        "label": "Filter",
+        "title": "Filter contacts",
+        "widgets": Array [
+          Object {
+            "config": Object {
+              "appName": "cn_mailchimp",
+              "entityName": "subscriber",
+              "fields": Object {
+                "method": "cn_mailchimp.get_subscriber_config_trigger",
+                "params": Array [
+                  "listId",
+                ],
+              },
+            },
+            "id": "visual-filter",
+            "name": "visual-filter",
+            "node": "visual-filter",
+          },
+          Object {
+            "node": "save-block",
+          },
+        ],
+      },
+      Object {
+        "app": "cn_mailchimp",
+        "groupClassName": "mapping-widget",
+        "label": "Mapping",
+        "title": "MailChimp subscribers to Dotloop people",
+        "validations": Array [
+          Object {
+            "field": "visual-mapping",
+            "type": "required",
+          },
+        ],
+        "widgets": Array [
+          Object {
+            "config": Object {
+              "cn_dotloop": Object {
+                "appName": "cn_dotloop",
+                "entityName": "person",
+                "fields": Array [
+                  Object {
+                    "_id": "dotloopFirstName",
+                    "autoMapping": Object {
+                      "name": "firstName",
+                    },
+                    "sample": "John",
+                    "setter": "firstName",
+                    "title": "First name",
+                  },
+                  Object {
+                    "_id": "dotloopRole",
+                    "sample": "BUYER",
+                    "setter": "role",
+                    "title": "Role",
+                  },
+                ],
+              },
+              "cn_mailchimp": Object {
+                "appName": "cn_mailchimp",
+                "entityName": "subscriber",
+                "fields": Object {
+                  "method": "cn_mailchimp.get_subscriber_config_trigger",
+                  "params": Array [
+                    "listId",
+                  ],
+                },
+              },
+            },
+            "id": "visual-mapping",
+            "name": "visual-mapping",
+            "node": "visual-mapping",
+          },
+          Object {
+            "node": "save-block",
+          },
+        ],
+      },
+    ],
+    "connectionObjects": Array [],
+    "connections": Array [
+      "cn_mailchimp",
+      "cn_dotloop",
+    ],
+    "cron_params": Object {
+      "minutes": 10,
+    },
+    "full_description": "",
+    "is_enabled": false,
+    "name": "mailchimp_subscribers_to_dotloop_people",
+    "saved_params": Object {
+      "cn_mailchimp": Object {
+        "trigger": "get_subscribers",
+      },
+    },
+    "short_description": "",
+    "status": "unused",
+    "workflow": Array [
+      Object {
+        "cn_mailchimp_get_updated_subscribers": Object {
+          "apiKey": "$config.cn_mailchimp.params.apiKey",
+          "listId": "$config.cn_mailchimp.saved_params.listId",
+          "mainLogId": "$config.runtime.saga_id",
+        },
+      },
+      Object {
+        "cn_dotloop_update_contacts": Object {
+          "mainLogId": "$config.runtime.saga_id",
+          "token": "$config.cn_dotloop.params.token",
+        },
+      },
+    ],
+  },
+}
+`;

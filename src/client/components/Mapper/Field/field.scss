@@ -1,0 +1,223 @@
+@import "~style/lib";
+
+$orange-color: #f9bf94;
+
+.mapper__app__fields__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    height: 5rem;
+    left: 0;
+
+    padding: 0 2rem;
+    margin-bottom: 1rem;
+
+    border: 1px dashed $gray-color;
+    color: #808080;
+    background: white;
+
+    user-select: none;
+
+    position: relative;
+
+    transition: all 0.1s;
+
+    &._dragging {
+        z-index: 999;
+        transition: none;
+    }
+
+    &._active {
+        border-color: $green-color;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 20%;
+        right: calc(100% + 0.5rem);
+        height: 60%;
+        width: 1rem;
+        //border: 1px solid $gray-color;
+        background: linear-gradient(0deg, #fff 25%, transparent 26%, transparent 75%, #fff 76%),
+        linear-gradient(90deg, #fff 25%, transparent 26%, transparent 75%, #fff 76%);
+        background-color: #dcdbdc;
+        background-size: 5px 5px;
+        transition: opacity $transition-speed;
+    }
+
+    &._mapped {
+        border: 1px solid $green-color;
+        color: $green-color;
+
+        &:before {
+            opacity: 0;
+        }
+    }
+
+    &:not(._mapped) {
+        cursor: pointer;
+    }
+
+    &__title {
+        @include ellipsis()
+    }
+
+    &__sample {
+        font-size: 0.8em;
+        opacity: 0.8;
+
+        @include ellipsis()
+    }
+
+    .draggable {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .react-draggable {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border: 1px solid red;
+        background: red;
+    }
+}
+
+.mapped-item {
+    &__info {
+        opacity: 0;
+        transition: opacity $transition-speed;
+        pointer-events: none;
+        z-index: 1;
+
+        left: 100%;
+        top: 0;
+        height: 100%;
+        position: absolute;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        @include mobile() {
+            width: 50%;
+        }
+
+        @include tablet() {
+            width: 50%;
+        }
+
+        @include desktop() {
+            width: 50%;
+        }
+
+        @include desktopBig() {
+            width: calc(100% - 6rem);
+        }
+
+        ._mapped & {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        &._constraints {
+            color: $orange-color;
+        }
+    }
+
+    &__icons {
+        height: 3rem;
+        width: 80%;
+        position: relative;
+        flex: 0 0 auto;
+    }
+
+    &__arrow {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: $green-color;
+
+        ._constraints & {
+            background: $orange-color;
+        }
+
+        @include mobile() {
+            display: none;
+        }
+
+        &:after {
+            content: '\25b6';
+            color: $green-color;
+            position: absolute;
+            right: -3px;
+            top: 0;
+            font-size: 1rem;
+            transform: translate(0, -50%);
+
+            ._constraints & {
+                color: $orange-color;
+            }
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        top: calc(50% - 1.5rem);
+        left: calc(50% - 1.5rem);
+        width: 3rem;
+        height: 3rem;
+        background: white;
+        border: 1px solid $green-color;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        ._constraints & {
+            border: 1px solid $orange-color;
+        }
+
+        &:before {
+            content: '\2713';
+            color: $green-color;
+            font-size: 2rem;
+
+            ._constraints & {
+                color: $orange-color;
+            }
+        }
+    }
+
+    &__delete {
+        cursor: pointer;
+        position: absolute;
+        left: calc(50% + 2rem);
+        top: -1rem;
+        width: 3rem;
+        height: 3rem;
+
+        &:before {
+            content: '\2715';
+            color: #808080;
+            font-size: 1.3rem;
+        }
+    }
+
+    &__messages {
+        font-size: 1rem;
+        width: 80%;
+        padding-top: 0.5rem;
+    }
+}

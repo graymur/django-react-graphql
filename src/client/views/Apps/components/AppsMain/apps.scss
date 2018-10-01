@@ -1,0 +1,22 @@
+@import "~style/lib";
+
+.apps {
+    &__list {
+        display: block;
+
+        @include tablet() {
+            columns: 2;
+            column-gap: 2rem
+        }
+
+        @include desktop() {
+            columns: 3;
+            column-gap: 3rem;
+        }
+
+        &__item {
+            margin-bottom: .5em;
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,34 @@
+@import "~style/lib";
+
+.main-menu__item {
+    align-items: center;
+    transition: border-color 0.2s;
+
+    @include mobile() {
+        border-left: solid 4px transparent;
+        display: flex;
+        height: 100%;
+        padding: 1.2rem 1.5rem 1.2rem 2.2rem;
+    }
+
+    @include tabletAndMore() {
+        border-top: solid 4px transparent;
+        display: flex;
+        height: 100%;
+        margin: 0 1.5rem;
+        padding: 0 2rem;
+    }
+
+    .nav-link {
+        color: #7d8b91;
+        transition: color 0.2s;
+    }
+
+    &.active, &:hover {
+        border-color: #fe3702;
+
+        .nav-link {
+            color: $orange-color;
+        }
+    }
+}

@@ -1,0 +1,20 @@
+type Query {
+    logs(triggerId: String): LogsBatch,
+    sublogs(triggerId: String, uid: String): LogsBatch
+}
+
+type LogsBatch {
+    items: [Log],
+    last: JSON
+}
+
+type Log {
+    _id: String,
+    trigger_id: String,
+    status: String,
+    uid: String,
+    data: String,
+    date: String,
+    message: String,
+    workflow_run_id: String
+}

@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+  - "8.9.0"
+env:
+  - CXX=g++-4.8
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-tests
+    packages:
+      - g++-4.8
+before_install:
+script:
+  - npm run dll
+  - npm run build
+

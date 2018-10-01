@@ -1,0 +1,26 @@
+@import "~style/lib";
+
+.mapper__active-field {
+    position: absolute;
+    z-index: 99;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity $transition-speed;
+    background: rgba(255, 255, 255, 0.5);
+
+    &._active {
+        opacity: 1;
+    }
+
+    @include desktop() {
+        width: calc(100% - 80rem);
+        left: 40rem;
+        top: 50%;
+        font-size: 1.8rem;
+        transform: translate(0, -50%);
+    }
+
+    &__info {
+        padding: 2rem;
+    }
+}

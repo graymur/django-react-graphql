@@ -1,0 +1,9 @@
+type Query {
+    apps: [App],
+    app(name: String!): App,
+}
+
+type App {
+    name: String,
+    full_name: String
+}

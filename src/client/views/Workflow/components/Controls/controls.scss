@@ -1,0 +1,101 @@
+@import "~style/lib";
+
+.workflow__controls {
+    display: flex;
+    justify-content: center;
+    height: 15rem;
+    position: relative;
+    transition: opacity $transition-speed;
+
+    &._loading, &._invalid ._start {
+        cursor: text;
+        pointer-events: none;
+        opacity: 0.5;
+    }
+
+    ._active & ._pause, ._inactive &:not(._invalid) ._start {
+        opacity: 1;
+        pointer-events: auto;
+        z-index: 1;
+    }
+
+    &__not-valid {
+        color: $orange-color;
+        padding-top: 1rem;
+        font-size: 1.6rem;
+        cursor: text;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity $transition-speed;
+    }
+
+    &._invalid &__not-valid {
+        opacity: 1;
+    }
+
+    .workflow__toggle {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        cursor: pointer;
+        display: block;
+        width: 5rem;
+        height: 5rem;
+
+        background-position: center;
+        background-repeat: no-repeat;
+
+        opacity: 0;
+        pointer-events: none;
+
+        transition: opacity $transition-speed;
+
+        z-index: 1;
+
+        &._pause {
+            background-image: url(~img/pause.svg);
+        }
+
+        &._start {
+            background-image: url(~img/start.svg);
+            color: $orange-color;
+        }
+
+        &__title {
+            position: absolute;
+            top: calc(100% + 0.5rem);
+            width: 100%;
+            text-align: center;
+
+            font-size: 1.2rem;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.workflow__run-now {
+    position: absolute;
+    left: 57%;
+    top: 50%;
+    background: $orange-color;
+    color: white;
+    border: 0;
+    border-radius: 3px;
+    white-space: nowrap;
+    line-height: 3rem;
+    margin-top: -1.5rem;
+    padding: 0 2rem;
+    cursor: pointer;
+    outline: none;
+
+    ._inactive & {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    &:active {
+        transform: translate(1px, 1px);
+    }
+}

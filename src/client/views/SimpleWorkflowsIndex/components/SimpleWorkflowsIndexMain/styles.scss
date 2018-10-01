@@ -1,0 +1,46 @@
+@import "~style/lib";
+
+.swi {
+    &__title {
+        @include mobile() {
+            text-align: center;
+        }
+    }
+
+    &__list {
+        margin-top: 5rem;
+        
+        
+
+        &__item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 3rem;
+
+            @include mobile() {
+                flex-direction: column;
+            }
+
+            .apps-pair {
+                width: 33%;
+                flex: 0 0 auto;
+            }
+
+            &__description {
+                flex-grow: 1;
+
+                @include mobile() {
+                    margin: 3rem 0;
+                }
+
+                @include min-screen($tablet) {
+                    padding-right: 3rem;
+                }
+            }
+
+            BUTTON {
+                cursor: pointer;
+            }
+        }
+    }
+}

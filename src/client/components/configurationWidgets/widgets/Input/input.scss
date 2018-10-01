@@ -1,0 +1,12 @@
+@import "~style/lib";
+
+.workflow-widget._input {
+    INPUT[type="checkbox"] {
+        display: inline-block;
+        margin-right: 1rem;
+    }
+
+    INPUT[type="text"] {
+        @extend %input-base;
+    }
+}

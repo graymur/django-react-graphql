@@ -1,0 +1,59 @@
+@import "~style/lib";
+
+.sheduler {
+    position: absolute;
+    height: 3rem;
+    top: 50%;
+    right: calc(50% + 5rem);
+    margin-top: -1.5rem;
+    display: flex;
+    white-space: nowrap;
+    align-items: center;
+    transition: opacity $transition-speed;
+    color: #323c47;
+
+    ._inactive & {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    &._loading {
+        opacity: .5;
+        pointer-events: none;
+    }
+
+    &__save {
+        position: absolute;
+        left: 50%;
+        top: calc(100% + 1.5rem);
+        background: $orange-color;
+        color: white;
+        border: 0;
+        border-radius: 3px;
+        white-space: nowrap;
+        line-height: 3rem;
+        padding: 0 2rem;
+        cursor: pointer;
+        outline: none;
+        transform: translate(-50%, 0);
+
+        ._inactive & {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        &:active {
+            transform: translate(calc(-50% + 1px), 1px);
+        }
+    }
+
+    INPUT, SELECT {
+        border: 1px solid darken(#e9eff4, 10%);
+        border-radius: 3px;
+        color: #323c47;
+        height: 100%;
+        padding: 0 1rem;
+        display: inline-block;
+        margin-left: 0.5rem;
+    }
+}
